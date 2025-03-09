@@ -9,6 +9,6 @@ import { Component , Input} from '@angular/core';
 })
 export class TasksComponent {
 
-  @Input() name: string | undefined;
+  @Input() name?: string ;
 
 }
