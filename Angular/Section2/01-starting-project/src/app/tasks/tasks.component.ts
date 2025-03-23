@@ -54,4 +54,8 @@ export class TasksComponent {
     // this.addNewTask.emit(true);
     this.isAddingTask = true;
   }
+
+  onNewTaskCancelled() {
+    this.isAddingTask = false;
+  }
 }
