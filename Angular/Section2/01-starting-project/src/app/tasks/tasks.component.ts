@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { TaskComponent } from './task/task.component';
 
 @Component({
@@ -12,6 +12,7 @@ export class TasksComponent {
 
   @Input({required : true}) name!: string;
   @Input({required : true}) userId!: string;
+  @Output() addNewTask = new EventEmitter();
 
   tasks = [
     {
@@ -41,5 +42,13 @@ export class TasksComponent {
 
   get selectedUserTasks() {
     return this.tasks.filter((task) => task.userId === this.userId);
+  }
+
+  onCompleteTask(id: string) {
+    this.tasks = this.tasks.filter((task) => task.id !== id);
+  }
+
+  onAddTask() {
+    this.addNewTask.emit(true);
   }
 }
