@@ -1,0 +1,14 @@
+<body>
+    <div class="game-container">
+        <div class="board" style="transform: rotate(180deg);">
+            <div class="center">Ous-opoly</div>
+
+            @for (tile of tiles; track tile.name) {
+                <div class="property" [style]="tile.style">
+                    {{ tile.name }}
+                </div>
+            }
+            
+        </div>
+    </div>
+</body>
