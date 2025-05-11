@@ -9,18 +9,18 @@ import { TasksComponent } from './tasks/tasks.component';
 import { CardComponent } from './shared/card/card.component';
 import { TaskComponent } from './tasks/task/task.component';
 import { NewTaskComponent } from './tasks/new-task/new-task.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     UserComponent,
-    CardComponent,
     TasksComponent,
     TaskComponent,
     NewTaskComponent,
   ], // For non-standalone components
   bootstrap: [AppComponent],
-  imports: [BrowserModule, FormsModule], // For standalone components
+  imports: [BrowserModule, FormsModule, SharedModule], // For standalone components
 })
 export class AppModule {}
