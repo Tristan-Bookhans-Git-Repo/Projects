@@ -2,11 +2,17 @@
     <div class="game-container">
         <div class="board" style="transform: rotate(180deg);">
             <div class="center">Ous-opoly</div>
+            @if (ispropSelected){
+                <app-detail-popup class="center" [tileID]="selectedTileID"></app-detail-popup>
+            }            
 
-            @for (tile of tiles; track tile.name) {
-                <div class="property" [style]="tile.style">
-                    {{ tile.name }}
-                </div>
+            @for (tile of tiles; track tile.id) {
+                <button [class]="tile.class" [style]="tile.style" (click)="onTileClick(tile.id)">
+                    @if (tile.price){
+                        <div class="property-price">{{currency}} {{tile.price}}</div>
+                    }
+                    <div class="property-name">{{tile.name}}</div>
+                </button>
             }
             
         </div>

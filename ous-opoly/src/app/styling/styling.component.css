@@ -33,7 +33,6 @@ body {
     font-weight: bold;
     text-align: center;
     padding: 5px;
-    transform: rotate(180deg);
 }
 
 .property {
@@ -46,7 +45,42 @@ body {
     text-align: center;
     padding: 1px;
     cursor: pointer;
-    transform: rotate(180deg);
+}
+
+.community-chest {
+    border: 0.01px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    text-align: center;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.chance {
+    border: 0.01px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    text-align: center;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.tax {
+    border: 0.01px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    text-align: center;
+    padding: 1px;
+    cursor: pointer;
 }
 
 .property-name {
@@ -60,17 +94,19 @@ body {
     transform: rotate(180deg);
 }
 
-.brown { background-color: #8B4513; color: white; 
-    transform: rotate(180deg);}
-.light-blue { background-color: #ADD8E6;}
-.pink { background-color: #FFC0CB; }
-.orange { background-color: #FFA500; }
+.brown { background-color: #5c2a07; color: white;}
+.light-blue { background-color: #2bb0dd;}
+.pink { background-color: #d53abe; }
+.orange { background-color: #d55f0b; }
 .red { background-color: #FF0000; color: white; }
 .yellow { background-color: #FFFF00; }
-.green { background-color: #008000; color: white; }
+.green { background-color: #0dc70d; color: white; }
 .dark-blue { background-color: #000080; color: white; }
 
-.railroad { background-color: #000; color: white; }
+.railroad { 
+    background-color: #000; 
+    color: white;
+}
 .utility { background-color: #fff; }
 
 .center {
@@ -96,4 +132,8 @@ body {
 
 .rotate-270 {
     transform: rotate(270deg);
+}
+
+.rotate-360 {
+    transform: rotate(360deg);
 }
