@@ -1,17 +1,45 @@
 <form (ngSubmit)="onSubmit()">
-  <p class="input-group">
-    <label for="initialInvestment"> INTIAL INVESTMENT </label>
-    <input type="float" id="initialInvestment" name="initialInvestment" [(ngModel)]="initInvestment"/>
-  
-    <label for="annualInvestment"> ANNUAL INVESTMENT </label>
-    <input type="float" id="annualInvestment" name="annualInvestment" [(ngModel)]="annInvestment"/>
+  <div class="input-group">
+    <p>
+      <label for="initialInvestment"> INTIAL INVESTMENT </label>
+      <input
+        type="number"
+        id="initialInvestment"
+        name="initialInvestment"
+        [(ngModel)]="initInvestment"
+      />
+    </p>
+    <p>
+      <label for="annualInvestment"> ANNUAL INVESTMENT </label>
+      <input
+        type="number"
+        id="annualInvestment"
+        name="annualInvestment"
+        [(ngModel)]="annInvestment"
+      />
+    </p>
+  </div>
+  <div class="input-group">
+    <p>
+      <label for="expectedReturn"> EXPECTED RETURN </label>
+      <input
+        type="number"
+        id="expectedReturn"
+        name="expectedReturn"
+        [(ngModel)]="expReturn"
+      />
+    </p>
+    <p>
+      <label for="duration"> DURATION </label>
+      <input
+        type="number"
+        id="duration"
+        name="duration"
+        [(ngModel)]="duration"
+      />
+    </p>
+  </div>
+  <p>
+    <button type="submit">CALCULATE</button>
   </p>
-  <p class="input-group">
-    <label for="expectedReturn"> EXPECTED RETURN </label>
-    <input type="float" id="expectedReturn" name="expectedReturn" [(ngModel)]="expReturn"/>
-    
-    <label for="duration"> DURATION </label>
-    <input type="float" id="duration" name="duration" [(ngModel)]="duration"/>
-  </p>
-  <button type="submit">CALCULATE</button>
 </form>

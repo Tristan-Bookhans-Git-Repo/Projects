@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
 
-import { type investmentInfo } from '../invest-info.model';
+import type { investmentInfo } from '../invest-info.model';
 
 @Component({
   selector: 'app-investment-results',
   standalone: true,
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './investment-results.component.html',
   styleUrl: './investment-results.component.css'
 })
@@ -13,14 +14,14 @@ export class InvestmentResultsComponent {
 
   @Input({required : true}) investmentInfo! : investmentInfo;
   
-  investmentData! : {
+  investmentData?: {
     year: number,
     interest: number,
     valueEndOfYear: number,
     annualInvestment: number,
     totalInterest: number,
     totalAmountInvested: number
-  }[];
+  }[] = [];
 
   private calculateInvestmentResults() {
     const annualData = [];
@@ -49,6 +50,10 @@ export class InvestmentResultsComponent {
     
     try {
       this.investmentData =  this.calculateInvestmentResults();
+      console.log(this.investmentData);
+      if (this.investmentData.length < 1){
+        return 0;
+      }
       return 1;
     }catch {
       return 0;
@@ -58,3 +63,7 @@ export class InvestmentResultsComponent {
   
 
 }
+function sizeof(investmentData: { year: number; interest: number; valueEndOfYear: number; annualInvestment: number; totalInterest: number; totalAmountInvested: number; }[]) {
+  throw new Error('Function not implemented.');
+}
+
