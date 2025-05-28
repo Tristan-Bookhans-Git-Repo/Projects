@@ -1,0 +1,7 @@
+<app-header></app-header>
+<app-user-input (investInfo)="calcReturn($event)"></app-user-input>
+@if (investInfo){
+    <app-investment-results [investmentInfo]="investInfo"></app-investment-results>
+}@else{
+    <p class="center">Please enter some investment data to be evaluated, and press Calculate</p>
+}  
