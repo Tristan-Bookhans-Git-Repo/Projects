@@ -1,0 +1,5 @@
+# Tuya device data (contains API keys, local keys, device IDs, IPs, location)
+tinytuya.json
+devices.json
+snapshot.json
+tuya-raw.json

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Chatter</string>
+    <string name="tab_1">Chats</string>
+    <string name="tab_2">Users</string>
+</resources>
